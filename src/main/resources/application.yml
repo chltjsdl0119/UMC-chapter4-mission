@@ -1,1 +1,36 @@
-spring.application.name=UMC-chapter4-mission
+spring:
+  datasource:
+
+    # H2 (In-memory database)
+    name: umcdb
+    url: jdbc:h2:mem:umcdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  # --- H2 Console Configuration ---
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: false
+
+  # --- JPA & Hibernate Configuration ---
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 100
+
+    open-in-view: true
+
+  # --- Paging Configuration ---
+  data:
+    web:
+      pageable:
+        default-page-size: 20 # ?? ??? ???
+        max-page-size: 2000 # ?? ??? ???
