@@ -1,7 +1,7 @@
 package com.umc.gwnu.book.domain;
 
 import com.umc.gwnu.global.domain.BaseTimeEntity;
-import com.umc.gwnu.user.domain.User;
+import com.umc.gwnu.user.domain.Member;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -29,8 +29,8 @@ public class Rent extends BaseTimeEntity {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "member_id")
+    private Member member;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "book_id")

@@ -1,6 +1,6 @@
 package com.umc.gwnu.alarm.domain;
 
-import com.umc.gwnu.user.domain.User;
+import com.umc.gwnu.user.domain.Member;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.EnumType;
@@ -35,8 +35,8 @@ public class Alarm {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "member_id")
+    private Member member;
 
     @Enumerated(EnumType.STRING)
     private AlarmType type;
