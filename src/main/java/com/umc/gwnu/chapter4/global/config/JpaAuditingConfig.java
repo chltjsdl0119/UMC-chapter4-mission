@@ -1,4 +1,4 @@
-package com.umc.gwnu.global.config;
+package com.umc.gwnu.chapter4.global.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;

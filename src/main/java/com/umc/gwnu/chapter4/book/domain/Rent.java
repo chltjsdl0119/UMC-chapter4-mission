@@ -1,6 +1,7 @@
-package com.umc.gwnu.hashtag.domain;
+package com.umc.gwnu.chapter4.book.domain;
 
-import com.umc.gwnu.book.domain.Book;
+import com.umc.gwnu.chapter4.global.domain.BaseTimeEntity;
+import com.umc.gwnu.chapter4.user.domain.Member;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -16,22 +17,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "book_hashtags")
+@Table(name = "rents")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder
 @Getter
-public class BookHashTag {
+public class Rent extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "book_id")
-    private Book book;
+    @JoinColumn(name = "member_id")
+    private Member member;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "hashtag_id")
-    private HashTag hashTag;
+    @JoinColumn(name = "book_id")
+    private Book book;
 }

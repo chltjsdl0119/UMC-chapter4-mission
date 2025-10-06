@@ -1,4 +1,4 @@
-package com.umc.gwnu.global.domain;
+package com.umc.gwnu.chapter4.global.domain;
 
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;

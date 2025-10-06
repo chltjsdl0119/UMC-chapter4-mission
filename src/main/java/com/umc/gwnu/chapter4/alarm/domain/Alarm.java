@@ -1,6 +1,6 @@
-package com.umc.gwnu.alarm.domain;
+package com.umc.gwnu.chapter4.alarm.domain;
 
-import com.umc.gwnu.user.domain.Member;
+import com.umc.gwnu.chapter4.user.domain.Member;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.EnumType;

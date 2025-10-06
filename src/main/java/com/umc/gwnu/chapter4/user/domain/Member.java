@@ -1,6 +1,6 @@
-package com.umc.gwnu.user.domain;
+package com.umc.gwnu.chapter4.user.domain;
 
-import com.umc.gwnu.global.domain.BaseTimeEntity;
+import com.umc.gwnu.chapter4.global.domain.BaseTimeEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

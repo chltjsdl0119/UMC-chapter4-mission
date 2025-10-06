@@ -1,6 +1,6 @@
-package com.umc.gwnu.book.domain;
+package com.umc.gwnu.chapter4.book.domain;
 
-import com.umc.gwnu.global.domain.BaseTimeEntity;
+import com.umc.gwnu.chapter4.global.domain.BaseTimeEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;

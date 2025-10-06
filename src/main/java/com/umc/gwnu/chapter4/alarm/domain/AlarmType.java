@@ -1,4 +1,4 @@
-package com.umc.gwnu.alarm.domain;
+package com.umc.gwnu.chapter4.alarm.domain;
 
 public enum AlarmType {
 
