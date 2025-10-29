@@ -1,4 +1,4 @@
-package com.umc.gwnu.user.domain;
+package com.umc.gwnu.member.domain;
 
 public enum Gender {
 

@@ -1,4 +1,4 @@
-package com.umc.gwnu.user.domain;
+package com.umc.gwnu.member.domain;
 
 import com.umc.gwnu.global.domain.BaseTimeEntity;
 import jakarta.persistence.Entity;
@@ -14,7 +14,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "members")
@@ -30,18 +30,16 @@ public class Member extends BaseTimeEntity {
 
     private String name;
 
-    private String nickname;
-
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @Enumerated(EnumType.STRING)
-    private Status statue;
+    private LocalDate birth;
 
-    private LocalDateTime inActiveAt;
+    private String address;
 
-    public void deactivate() {
-        this.statue = Status.INACTIVE;
-        this.inActiveAt = LocalDateTime.now();
-    }
+    private int point = 0;
+
+    private String email;
+
+    private String phoneNumber;
 }
