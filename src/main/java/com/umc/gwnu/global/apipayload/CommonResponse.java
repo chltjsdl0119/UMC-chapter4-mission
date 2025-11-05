@@ -19,8 +19,8 @@ public record CommonResponse<T>(
         @JsonProperty("result")
         T result
 ) {
-    public static <T> CommonResponse<T> onSuccess(BaseErrorCode code, T result) {
-        return new CommonResponse<>(true, code.getCode(), code.getMessage(), result);
+    public static <T> CommonResponse<T> onSuccess(T result) {
+        return new CommonResponse<>(true, "200", "요청에 성공하였습니다.", result);
     }
 
     public static <T> CommonResponse<T> onFailure(BaseErrorCode code, T result) {
